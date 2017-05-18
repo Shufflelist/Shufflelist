@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<link href="css/bootstrap.css" rel="stylesheet">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            
+            <link href="css/style.css" rel="stylesheet">
+		<title>Shufflelist</title>
+        
+        <script>
+		
+			function closelogin()
+			{
+				
+				document.getElementById('login').style.display='none';	
+			}
+			
+			function login()
+			{
+				document.getElementById('register').style.display='none';	
+				document.getElementById('login').style.display='block';	
+			}
+			function closeregister()
+			{
+				document.getElementById('register').style.display='none';	
+			}
+			function register()
+			{
+				document.getElementById('login').style.display='none';	
+				document.getElementById('register').style.display='block';	
+			}
+		</script>
+        
+	</head>
+
+	<body>
+		<!--TITLE-->
+		<!--|||||||||||||||||||||||||||||||||||||||||||||||||||-->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-10">
+					<h1>Shufflelist</h1>
+				</div>
+				<div class="col-xs-2 text-right">
+					<button class="btn btn-default" onclick="login()" type="submit">Login</button>
+					<button class="btn btn-default" onClick="register()" type="submit">Register</button>
+				</div>
+			</div>
+			<div style="height:50px;"></div>
+			<div class="row" style="width: auto; height: 200px; overflow: hidden;">
+				<img src="banner.jpg" alt="banner" style="transform: translateY(-35%); transform:scale(-50%,-50%);" class=".img-responsive">
+			</div>
+		</div>
+        
+        
+        
+        
+        <!---Register-->
+    	
+        
+        <!-- Button to open the modal login form -->
+ 
+        
+        <!-- Register Pop-Up -->
+        <div id="register" class="modal">
+        
+        
+          <!-- Register Pop-Up Content -->
+          <form class="modal-content-register animate">
+         
+        
+            <div class="container-fluid">
+            	 <div style="height:50px;"></div>
+           		 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">
+             		 	 <label><b>Username</b></label>
+              		 	 <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+                         </div>
+                 </div>
+               
+                <div style="height:10px;"></div>
+               
+  				<div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">
+                      		  <label><b>Email:</b></label>
+             		 	      <div class="input-group">
+                                  <span class="input-group-addon" id="basic-addon1">@</span>
+                                  <input type="text" class="form-control" placeholder="Email" aria-describedby="basic-addon1">
+                              </div>
+
+                         </div>
+                 </div>           
+          
+            	 <div style="height:10px;"></div>
+          
+          		 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">
+             		 	 <label><b>Vorname</b></label>
+              		 	 <input type="text" class="form-control" placeholder="Vorname" name="vname" required>
+                         </div>
+                 </div>
+                 
+                  <div style="height:10px;"></div>
+          
+          		 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">
+             		 	 <label><b>Nachname</b></label>
+              		 	 <input type="text" class="form-control" placeholder="Nachname" name="nname" required>
+                         </div>
+                 </div>
+               
+               
+                   <div style="height:10px;"></div>
+          
+          		 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-3">
+             		 	 <label><b>Ort<b></label>
+              		 	 <input type="text" class="form-control" placeholder="Ort" name="ort" required>
+                     </div>
+                     <div class="col-md-3">
+                      <label><b>PLZ</b></label>
+                     <input type="text" class="form-control" placeholder="PLZ" name="plz" required>
+                     </div>
+                 </div>
+                 
+                 <div style="height:10px;"></div>
+               
+                <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">
+             		 	 <label><b>Straße</b></label>
+              		 	 <input type="text" class="form-control" placeholder="Straße" name="strasse" required>
+                         </div>
+                 </div>
+                 <div style="height:10px;"></div>
+              
+                    <div class="row">
+                      <div class='col-md-3'></div>
+                        <div class='col-md-6'>
+                        <label><b>Geburtsdatum:</b></label>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker1'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                            $(function () {
+                                $('#datetimepicker1').datetimepicker();
+                            });
+                        </script>
+                    </div>
+
+               
+             
+               	
+               
+               
+                     <div class="row">
+                         <div class="col-md-3"></div>
+                         <div class="col-md-6">
+                             <label><b>Password</b></label>
+                             <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                         </div>
+                     </div>
+        	  	 <div style="height:10px;"></div>
+                 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-3">
+                         <button type="submit" class="btn btn-success">Register</button>
+                     </div>
+                       <div class="col-md-1">  </div>
+                     <div class="col-md-3">    
+                         <button type="button" onclick=" closeregister()" class="btn btn-danger">Cancel</button>
+                     </div>
+              	 </div>
+                 <div style="height:10px;"></div>
+                 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">    
+                 		 <button type="button"  onclick=" login()" style="width:100%;" class="btn btn-info">Already got an Account</button>
+                     </div>
+                 </div>
+            </div>
+          </form>
+        </div>
+        
+		
+        
+        <!-- Login Pop-Up -->
+        <div id="login" class="modal">
+        
+        
+          <!-- Login Pop-Up Content -->
+          <form class="modal-content-login animate">
+         
+            <div class="container-fluid">
+            	 <div style="height:50px;"></div>
+           		 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">
+             		 	 <label><b>Username</b></label>
+              		 	 <input type="text" class="form-control" placeholder="Enter Username" name="uname" required>
+                         </div>
+                 </div>
+                     <div class="row">
+                         <div class="col-md-3"></div>
+                         <div class="col-md-6">
+                             <label><b>Password</b></label>
+                             <input type="password" class="form-control" placeholder="Enter Password" name="psw" required>
+                         </div>
+                     </div>
+        	  	 <div style="height:10px;"></div>
+                 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-3">
+                         <button type="submit" class="btn btn-success">Login</button>
+                     </div>
+                     
+                     <div class="col-md-2">    
+                         <button type="button" onclick=" closelogin()" class="btn btn-danger">Cancel</button>
+                     </div>
+              	 </div>
+                 <div style="height:10px;"></div>
+                 <div class="row">
+                 	 <div class="col-md-3"></div>
+                     <div class="col-md-6">    
+                 		 <button type="button"  onclick=" register()" style="width:100%;" class="btn btn-info">Create an Account</button>
+                     </div>
+                 </div>
+            </div>
+          </form>
+        </div>
+
+		
+		<!--NAVBAR-->
+		<!--|||||||||||||||||||||||||||||||||||||||||||||||||||-->
+		<nav class="navbar navbar-default" style="border-radius:0px;" role="navigation">
+			 <div class="navbar-header">
+				  <a class="navbar-brand" href="#">Student Mission</a>
+			 </div>
+			 <ul class="nav navbar-nav">
+				 <li class="active"><a href="#">Home</a></li>
+				 <li><a href="Kontakt.html">Kontakt</a></li>
+			 </ul>
+		</nav>
+		
+		<!--CONTENT-->
+		<!--|||||||||||||||||||||||||||||||||||||||||||||||||||-->
+		<div class="col-lg-1"></div>
+		<div class="col-lg-6">
+			<h1>Shufflelist</h1>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mauris lacus, feugiat nec scelerisque at, dapibus vitae dolor. Curabitur iaculis libero ac pellentesque lobortis. Etiam at mauris metus. Donec dapibus leo porttitor velit lobortis mollis. Aliquam congue vehicula leo et aliquet. Aenean scelerisque consequat urna. Morbi ullamcorper placerat quam, et porttitor felis suscipit sed.
+
+				Donec eu posuere lorem. Suspendisse pellentesque dui ligula, at aliquam quam pellentesque sed. Sed tempus molestie dignissim. Vivamus luctus lorem id sem congue accumsan. Nullam finibus quam tincidunt dui fermentum lacinia. Donec in efficitur dolor. Nam placerat elementum est, in pulvinar mi maximus non. Proin bibendum suscipit dolor venenatis facilisis. Mauris faucibus magna vel massa tincidunt, vel tempor risus aliquet.
+		</div>
+		<div class="col-md-3">
+
+		</div>
+		<div class="col-md-2">
+		<img src="werbung.jpg" alt="werbung" class=".img-responsive">
+
+		</div>
+	</body>
+</html>
